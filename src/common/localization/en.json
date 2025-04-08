@@ -1,0 +1,38 @@
+{
+  "message": {
+    "welcome": "Welcome",
+    "username": "Username",
+    "userpassword": "Password",
+    "login": "Login",
+    "validate": {
+      "email": "Please enter your email",
+      "password": "Please enter your password",
+      "rememberme": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "no_account": "Don't have an account?",
+      "sign_up": "Sign up",
+      "missing_credentials": "Please enter email and password",
+      "login_failed": "Login failed, please try again"
+    },
+    "supplier": {
+      "create_supplier_form": "Create Supplier Form",
+      "edit_supplier_form": "Edit Supplier Form",
+      "create_supplier": "Create Supplier",
+      "edit_supplier": "Edit Supplier",
+      "supplier_name": "Supplier Name",
+      "supplier_company": "Supplier Company",
+      "supplier_code": "Supplier Code",
+      "supplier_email": "Supplier Email",
+      "supplier_phone": "Supplier Phone",
+      "supplier_address": "Supplier Address"
+    },
+    "supplier_validation": {
+      "supplier_name_required": "Please enter supplier name",
+      "supplier_code_required": "Please enter supplier code",
+      "supplier_company_required": "Please enter supplier company",
+      "supplier_email_required": "Please enter supplier email",
+      "supplier_phone_required": "Please enter supplier phone",
+      "supplier_address_required": "Please enter supplier address"
+    }
+  }
+}

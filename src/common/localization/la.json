@@ -1,0 +1,38 @@
+{
+  "message": {
+    "welcome": "ຍິນດີຕອນຮັບ",
+    "username": "ຊື່ຜູ້ໃຊ້",
+    "userpassword": "ລະຫັດຜ່ານ",
+    "login": "ເຂົ້າສູ່ລະບົບ",
+    "validate": {
+      "email": "ກະລຸນາໃສ່ອີເມວຂອງທ່ານ",
+      "password": "ກະລຸນາໃສ່ລະຫັດຜ່ານຂອງທ່ານ",
+      "rememberme": "ຈື່ຂ້ອຍ",
+      "forgotPassword": "ລືມລະຫັດຜ່ານ?",
+      "no_account": "ບໍ່ມີບັນຊີບໍ?",
+      "sign_up": "ລົງທະບຽນ",
+      "missing_credentials": "ກະລຸນາໃສ່ອີເມວ ແລະ ລະຫັດຜ່ານ",
+      "login_failed": "ເຂົ້າສູ່ລະບົບບໍ່ສຳເລັດ, ກະລຸນາລອງໃໝ່ອີກຄັ້ງ"
+    },
+    "supplier": {
+      "create_supplier_form": "ຟອມສ້າງຜູ້ສະໜອງ",
+      "edit_supplier_form": "ຟອມແກ້ໄຂຜູ້ສະໜອງ",
+      "create_supplier": "ສ້າງຜູ້ສະໜອງ",
+      "edit_supplier": "ແກ້ໄຂຜູ້ສະໜອງ",
+      "supplier_name": "ຊື່ຜູ້ສະໜອງ",
+      "supplier_company": "ບໍລິສັດຜູ້ສະໜອງ",
+      "supplier_code": "ເລກລະຫັດຜູ້ສະໜອງ",
+      "supplier_email": "ອີເມວ",
+      "supplier_phone": "ເບີໂທ",
+      "supplier_address": "ທີ່ຢູ່"
+    },
+    "supplier_validation": {
+      "supplier_name_required": "ກະລຸນາໃສ່ຊື່ຜູ້ສະໜອງ",
+      "supplier_company_required": "ກະລຸນາໃສ່ຊື່ບໍລິສັດ",
+      "supplier_code_required": "ກະລຸນາໃສ່ເລກລະຫັດ",
+      "supplier_email_required": "ກະລຸນາໃສ່ອີເມວ",
+      "supplier_phone_required": "ກະລຸນາໃສ່ເບີໂທ",
+      "supplier_address_required": "ກະລຸນາໃສ່ທີ່ຢູ່"
+    }
+  }
+}
