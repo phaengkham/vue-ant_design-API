@@ -1,16 +1,26 @@
-import type { Router } from "vue-router";
+import type { Router, NavigationGuardNext, RouteLocationNormalized } from "vue-router";
 
 export function authGuard(router: Router) {
-    router.beforeEach(async (to, from, next) => {
-        console.log(from);
-        const token = localStorage.getItem("accessToken"); // Fixed typo in getItem
+    router.beforeEach(
+        async (
+            to: RouteLocationNormalized,
+            from: RouteLocationNormalized,
+            next: NavigationGuardNext
+        ) => {
+            console.log("Navigating from:", from.fullPath);
+            console.log("Navigating to:", to.fullPath);
 
-        if (to.meta.skipAuthCheck) {
-            next();
-        } else {
+            const token: string | null = localStorage.getItem("accessToken");
+
+            if (to.meta.skipAuthCheck) {
+                next();
+                return;
+            }
+
+           
             if (token) {
                 if (to.name === "login") {
-                    next({ name: "test" });
+                    next({ name: "showbanner" });
                 } else {
                     next();
                 }
@@ -22,5 +32,5 @@ export function authGuard(router: Router) {
                 }
             }
         }
-    });
+    );
 }

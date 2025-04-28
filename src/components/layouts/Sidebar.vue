@@ -4,29 +4,33 @@
     </div>
     <a-menu v-model:selectedKeys="selectedKeys" class="sidebar-menu" mode="inline">
         <a-menu-item key="1" @click="gotoRoute('mycomponent')">
-            <UsergroupAddOutlined />
+            <UsergroupAddOutlined class="menu-icon" />
             <span>Membership</span>
         </a-menu-item>
         <a-menu-item key="2" @click="gotoRoute('showbanner')">
-            <CopyOutlined />
+            <CopyOutlined class="menu-icon" />
             <span>Banners</span>
         </a-menu-item>
         <a-menu-item key="3" @click="gotoRoute('supplier')">
-            <FileImageOutlined />
+            <FileImageOutlined class="menu-icon" />
             <span>Supplier</span>
         </a-menu-item>
         <a-menu-item key="4" @click="gotoRoute('mybanner')">
-            <ProjectOutlined />
+            <ProjectOutlined class="menu-icon" />
             <span>My-Banner</span>
         </a-menu-item>
-        <a-menu-item key="5" @click="gotoRoute('myrole')">
-            <LoadingOutlined />
+        <a-menu-item key="5" @click="gotoRoute('forms')">
+            <FileDoneOutlined class="menu-icon" />
+            <span>Form</span>
+        </a-menu-item>
+        <a-menu-item key="6" @click="gotoRoute('myrole')">
+            <AuditOutlined class="menu-icon" />
             <span>Role-Guard</span>
         </a-menu-item>
         <a-sub-menu key="sub2">
             <template #title>
                 <span>
-                    <TeamOutlined />
+                    <TeamOutlined class="menu-icon" />
                     <span>Team</span>
                 </span>
             </template>
@@ -36,6 +40,7 @@
     </a-menu>
 </template>
 
+
 <script lang="ts" setup>
 import { ref } from 'vue';
 import {
@@ -43,8 +48,9 @@ import {
     TeamOutlined,
     UsergroupAddOutlined,
     FileImageOutlined,
-    LoadingOutlined,
+    AuditOutlined,
     ProjectOutlined,
+    FileDoneOutlined,
 } from '@ant-design/icons-vue';
 import { useRouter } from 'vue-router';
 
@@ -74,5 +80,16 @@ const gotoRoute = (routeName: string) => {
         object-fit: contain;
         border-radius: 5px;
     }
+}
+
+.menu-icon {
+    font-size: 20px;
+    /* size of your icon */
+    color: #1890ff;
+    /* Ant Design blue */
+    margin-right: 8px;
+    /* space between icon and text */
+    vertical-align: middle;
+    /* align icon nicely */
 }
 </style>

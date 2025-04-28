@@ -15,37 +15,35 @@
                     <comment-outlined class="menu-icon" />
                 </a-avatar>
             </a-badge>
-            <a-badge>
-                <a-avatar shape="square" size="large" class="navbar-btn">
-                    <LogoutOutlined />
-                </a-avatar>
-            </a-badge>
+            <NotificationMenu />
+            <UserMenu />
         </div>
     </a-layout-header>
 </template>
 
-<script lang="ts" setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { ref } from 'vue'
 import {
     ShoppingCartOutlined,
     MenuUnfoldOutlined,
     MenuFoldOutlined,
-    CommentOutlined,
-    LogoutOutlined,
-} from "@ant-design/icons-vue";
+    CommentOutlined
+} from '@ant-design/icons-vue'
+import UserMenu from './header/UserMenu.vue'
+import NotificationMenu from './header/NotificationMenu.vue'
 
-const collapsed = ref<boolean>(false);
-
-const emit = defineEmits<{ (e: "toggleSidebar"): void }>();
+const collapsed = ref(false)
+const emit = defineEmits<{ (e: 'toggleSidebar'): void }>()
 
 const onCollapsed = () => {
-    collapsed.value = !collapsed.value;
-    emit("toggleSidebar");
-};
+    collapsed.value = !collapsed.value
+    emit('toggleSidebar')
+}
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .header-action-container {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -60,8 +58,7 @@ const onCollapsed = () => {
         height: 32px;
         line-height: 32px;
         border-radius: 50% !important;
-        padding-right: 0;
-        padding-left: 0;
+        padding: 0;
         text-align: center !important;
 
         :hover {
@@ -75,5 +72,8 @@ const onCollapsed = () => {
     justify-content: space-between;
     align-items: center;
     height: 64px;
+    overflow: visible;
+    position: relative;
+    z-index: 10;
 }
 </style>

@@ -1,16 +1,36 @@
 <template>
     <a-layout style="min-height: 100vh">
         <!-- Sidebar -->
-        <a-layout-sider v-model:collapsed="collapsed" collapsible style="background: #fff; min-height: 100vh;">
+        <a-layout-sider v-model:collapsed="collapsed" collapsible
+            style="background: #fff; min-height: 100vh; position: fixed; left: 0; top: 0; bottom: 0; z-index: 1001;"
+            :width="200" :collapsedWidth="80">
             <Sidebar />
         </a-layout-sider>
 
-        <a-layout>
-            <!-- Navbar -->
-            <Navbar @toggle-sidebar="() => (collapsed = !collapsed)" />
+        <!-- Right Side Layout -->
+        <a-layout :style="{ marginLeft: collapsed ? '80px' : '200px' }">
+            <!-- Fixed Navbar -->
+            <div :style="{
+                position: 'fixed',
+                top: '0',
+                left: collapsed ? '80px' : '200px',
+                right: '0',
+                zIndex: 1000,
+                background: '#fff',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                height: '64px',
+            }">
+                <Navbar @toggle-sidebar="() => (collapsed = !collapsed)" />
+            </div>
 
             <!-- Page Content -->
-            <a-layout-content :style="{ margin: '10px 10px', padding: '24px', background: '#fff', minHeight: '280px' }">
+            <a-layout-content :style="{
+                margin: '10px 10px',
+                padding: '24px',
+                background: '#fff',
+                minHeight: '280px',
+                paddingTop: '74px',
+            }">
                 <router-view />
             </a-layout-content>
 
@@ -31,26 +51,4 @@ import Footer from '@/components/layouts/Footer.vue';
 const collapsed = ref<boolean>(false);
 </script>
 
-<style>
-#components-layout-demo-custom-trigger .trigger {
-    font-size: 18px;
-    line-height: 64px;
-    padding: 0 24px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-#components-layout-demo-custom-trigger .trigger:hover {
-    color: #1890ff;
-}
-
-#components-layout-demo-custom-trigger .logo {
-    height: 32px;
-    background: rgba(255, 255, 255, 0.3);
-    margin: 16px;
-}
-
-.site-layout .site-layout-background {
-    background: #fff;
-}
-</style>
+<style scoped></style>

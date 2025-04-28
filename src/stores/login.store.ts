@@ -17,7 +17,7 @@ export const useLoginStore = defineStore("loginStore", () => {
                 localStorage.setItem("user", JSON.stringify(response.data.authUser));
 
                 console.log("Login successful, redirecting...");
-                router.push("/admin"); // ✅ Ensure this works
+                router.push({name:'showbanner'}); // ✅ Ensure this works
             } else {
                 throw new Error("Login failed");
             }

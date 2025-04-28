@@ -8,6 +8,7 @@ import UpdateSupplier from '@/components/supplier/Form.update.vue';
 import MyBanner from '@/views/MyBanner.vue';
 import CreateMyBanner from '@/components/banner/Form.create.vue';
 import UpdateMyBanner from '@/components/banner/Form.update.vue';
+import FormElement from '@/views/forms/FormElements.vue';
 import MyRole from '@/views/ShowRoleGuard.vue';
 import { rolesGuard } from '@/common/guard/role.guard';
 import { authGuard } from '@/common/guard/auth.guard';
@@ -84,6 +85,11 @@ const router = createRouter({
           name: 'update.my.banner',
           component: UpdateMyBanner,
           props: true,
+        },
+        {
+          path: 'forms',
+          name: 'forms',
+          component: FormElement,
         },
       ],
     },
